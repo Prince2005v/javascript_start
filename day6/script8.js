@@ -1,10 +1,20 @@
-let inp =document.querySelector("input");
+let input = document.querySelector("input");
+let heading = document.querySelector("h2");
 
-inp.addEventListener("input" ,function (dets) {
-  // console.log(dets); sirf ae write karege to delete char arne pe bhi data ayega NULL
+input.addEventListener("input", function(dets) {
 
-  if(dets.data !== null){
-    console.log(dets.data);
+  // delete karne par null aata hai
+  if (dets.data !== null) {
+
+    console.log("Typed Character :", dets.data);
+
+    // heading me live text show hoga
+    heading.textContent = input.value;
+
+  } else {
+
+    console.log("Character Deleted");
+
   }
-});
 
+});
